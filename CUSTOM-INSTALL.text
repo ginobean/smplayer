@@ -1,9 +1,8 @@
-# some subset of these were needed for a successful install. don't remember
-# which ones, exactly..
-sudo apt install  qtbase5-dev qt5-qmake qt5-default qtscript5-dev
-sudo apt install qt5sudo apt-get install qtbase5-dev qtchooser qt5-qmake qtbase5-dev-tools
+sudo apt install  qtbase5-dev qt5-qmake qtscript5-dev
+sudo apt install  qtchooser qtbase5-dev-tools
 sudo apt install qtbase5-private-dev
-sudo apt install qttools5-dev-tools libdtkwidget-dev
+sudo apt-get install qttools5-dev-tools
+
 
 --
 Also, when you install, prefer a non-root (and non-sudo) install.
