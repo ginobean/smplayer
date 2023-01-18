@@ -1,0 +1,11 @@
+src/.moc/
+src/.qmake.stash
+src/.ui/
+src/Makefile
+src/qrc_H2O.cpp
+src/qrc_icons.cpp
+src/smplayer
+src/svn_revision.h
+svn_revision
+version
+webserver/simple_web_server
