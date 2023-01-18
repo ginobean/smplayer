@@ -34,7 +34,7 @@ webserver/simple_web_server:
 
 clean:
 	if [ -f src/Makefile ]; then cd src && make distclean; fi
-	-rm src/translations/smplayer_*.qm
+	-rm src/translations/smplayer_*.ts
 	-rm webserver/simple_web_server
 
 install: all
@@ -43,7 +43,7 @@ install: all
 	-install -d $(DESTDIR)$(DATA_PATH)
 	install -m 644 src/input.conf $(DESTDIR)$(DATA_PATH)
 	-install -d $(DESTDIR)$(TRANSLATION_PATH)
-	install -m 644 src/translations/*.qm $(DESTDIR)$(TRANSLATION_PATH)
+	install -m 644 src/translations/*.ts $(DESTDIR)$(TRANSLATION_PATH)
 	-install -d $(DESTDIR)$(DOC_PATH)
 	install -m 644 Release_notes.md *.txt $(DESTDIR)$(DOC_PATH)
 
@@ -90,7 +90,7 @@ install: all
 uninstall:
 	-rm -f $(PREFIX)/bin/smplayer
 	-rm -f $(DATA_PATH)/input.conf
-	-rm -f $(TRANSLATION_PATH)/*.qm
+	-rm -f $(TRANSLATION_PATH)/*.ts
 	-rm -f $(DOC_PATH)/Changelog
 	-rm -f $(DOC_PATH)/*.txt
 	-rm -f $(SHORTCUTS_PATH)/*.keys
@@ -113,4 +113,3 @@ uninstall:
 	-(cd docs && find -type d -name '??') | (cd $(DESTDIR)$(DOC_PATH) && xargs rmdir)
 	-rmdir $(DOC_PATH)/
 	-rmdir $(DATA_PATH)/
-
