@@ -34,8 +34,7 @@ webserver/simple_web_server:
 
 clean:
 	if [ -f src/Makefile ]; then cd src && make distclean; fi
-	-rm src/translations/smplayer_*.ts
-	-rm webserver/simple_web_server
+	-rm -f webserver/simple_web_server
 
 install: all
 	-install -d $(DESTDIR)$(PREFIX)/bin/
