@@ -9,3 +9,5 @@ src/svn_revision.h
 svn_revision
 version
 webserver/simple_web_server
+src/translations/*.qm
+src/*.json
